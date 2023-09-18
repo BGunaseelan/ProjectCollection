@@ -1,14 +1,18 @@
 package org.stepdefinitions;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import io.cucumber.java.en.Given;
 
 public class StepDefinitionsCollection {
 	@Given("Array List")
 	public void array_list() {
-		List list = new ArrayList();
+		List<Object> list = new ArrayList();
 		list.add("Guna");
 		list.add(12345);
 		list.add(123.45);
@@ -31,49 +35,29 @@ public class StepDefinitionsCollection {
 			System.out.println(a);
 		}
 	}
-	@Given("Linked List")
-	public void linked_list() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	@Given("Hash Set")
-	public void hash_set() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	@Given("Linked Hash Set")
-	public void linked_hash_set() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	@Given("Tree Set")
-	public void tree_set() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+
 	@Given("Hash Map")
 	public void hash_map() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	@Given("Linked Hash Map")
-	public void linked_hash_map() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	@Given("Tree Map")
-	public void tree_map() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	@Given("Hash Table")
-	public void hash_table() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	@Given("2D Array")
-	public void d_array() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+		Map<String,Integer> m1 = new HashMap();
+		m1.put("Ten",10);
+		m1.put("Twenty",20);
+		m1.put("Thirty",30);
+		m1.put("Forty",40);
+		m1.put("Fifty",null);
+		m1.put("Sixty",60);
+		m1.put("Seventy",null);
+		System.out.println(m1);
+		//Iterate by using for-each loop
+				System.out.println("Datas stored in Hash Map:");
+				Set<String>keySet = m1.keySet();
+				System.out.println("===Keys===");
+				for(String a:keySet) {
+					System.out.println(a);
+				}
+				Collection<Integer>values =m1.values();
+				System.out.println("===Values===");
+				for(Integer b:values) {
+					System.out.println(b);
+				}
+		}
 	}
