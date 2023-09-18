@@ -35,29 +35,4 @@ public class StepDefinitionsCollection {
 			System.out.println(a);
 		}
 	}
-
-	@Given("Hash Map")
-	public void hash_map() {
-		Map<String,Integer> m1 = new HashMap();
-		m1.put("Ten",10);
-		m1.put("Twenty",20);
-		m1.put("Thirty",30);
-		m1.put("Forty",40);
-		m1.put("Fifty",null);
-		m1.put("Sixty",60);
-		m1.put("Seventy",null);
-		System.out.println(m1);
-		//Iterate by using for-each loop
-				System.out.println("Datas stored in Hash Map:");
-				Set<String>keySet = m1.keySet();
-				System.out.println("===Keys===");
-				for(String a:keySet) {
-					System.out.println(a);
-				}
-				Collection<Integer>values =m1.values();
-				System.out.println("===Values===");
-				for(Integer b:values) {
-					System.out.println(b);
-				}
-		}
-	}
+}
