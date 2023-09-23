@@ -3,6 +3,7 @@ package org.stepdefinitions;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -59,7 +60,25 @@ public class StepDefinitionsCollection {
 					System.out.println(b);
 				}
 	}
-
-
-
+	@Given("Linked Hash Set")
+	public void linked_hash_set() {
+		Set<Object> set = new LinkedHashSet();
+		set.add("Guna");
+		set.add(12345);
+		set.add(123.45);
+		set.add(true);
+		set.add(null);
+		set.add("Guna");
+		set.add(12345);
+		set.add(123.45);
+		set.add(true);
+		set.add(null);
+		System.out.println(set);
+		//Iterate by using for loop
+		System.out.println("Datas stored in Linked HashSet:");
+		System.out.println("===for-each Loop Iteration===");
+		for(Object a:set) {
+			System.out.println(a);
+		}
+	}
 }
