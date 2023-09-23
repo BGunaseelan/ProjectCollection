@@ -3,6 +3,7 @@ package org.stepdefinitions;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -35,4 +36,28 @@ public class StepDefinitionsCollection {
 			System.out.println(a);
 		}
 	}
+	@Given("Linked List")
+	public void linked_list() {
+		List<Object> list1 = new LinkedList();
+		list1.add("Guna");
+		list1.add(12345);
+		list1.add(123.45);
+		list1.add(true);
+		list1.add(null);
+		list1.add("Guna");
+		list1.add(12345);
+		list1.add(123.45);
+		list1.add(true);
+		list1.add(null);
+		System.out.println(list1);
+		//Iterate by using for loop
+		System.out.println("Datas stored in LinkedLIst:");
+		System.out.println("===for-each Loop Iteration===");
+		for(Object a:list1) {
+			System.out.println(a);
+		}
+	}
+
+
+
 }
