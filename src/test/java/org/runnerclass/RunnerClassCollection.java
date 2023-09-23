@@ -5,7 +5,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "D:\\Selenium\\eclipse-workspace\\GitShareExample\\FeatureFiles\\example1.feature", 
+@CucumberOptions(features = "D:\\Selenium\\Git Clone\\ProjectCollection\\FeatureFiles\\example1.feature", 
 				glue = "org.stepdefinitions", dryRun = false)
 public class RunnerClassCollection {
 
